@@ -1,0 +1,4 @@
+ex-employee.ini
+__pycache__
+*.pyc
+*.session

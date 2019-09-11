@@ -1,0 +1,2 @@
+Telethon==1.10.1
+python-gitlab==1.11.0
