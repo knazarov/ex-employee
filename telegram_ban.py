@@ -15,10 +15,8 @@ import telethon
 
 
 def ban(client, usernames, whitelist, dry_run=True):
-    dialogs = client.get_dialogs()
-
     for dialog in client.iter_dialogs(limit=None):
-        if dialog.is_group and not dialog.is_channel and dialog.name not in whitelist:
+        if dialog.is_group and dialog.name not in whitelist:
             for user in client.iter_participants(dialog, limit=None):
                 if user.username in usernames:
                     if dry_run:
